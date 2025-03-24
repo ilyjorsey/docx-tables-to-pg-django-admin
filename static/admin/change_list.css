@@ -1,0 +1,35 @@
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+form h1 {
+    font-weight: bold;
+}
+
+.file-name {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(255, 246, 200);
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(218, 209, 169);
+}
