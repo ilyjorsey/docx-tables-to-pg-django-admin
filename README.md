@@ -1,8 +1,10 @@
 # Algorithm for Uploading Data from DOCX Tables to Database via Django Admin
 
-This algorithm allows you to upload data from DOCX tables directly into a database through the Django admin panel. The core of the functionality is based on the `DocxToDB` class, which handles the conversion of DOCX tables to CSV and imports the data into a specified model.
+This algorithm allows you to upload data from DOCX tables directly into a database through the Django admin panel. 
 
 ### How It Works
+
+[utils.py](./documents/utils/utils.py) - contains the basic algorithm for processing DOCX.
 
 1. **File Upload in Admin Panel**: 
    You can drag and drop a DOCX file into the Django admin panel. The file is then processed, and the data is extracted from the tables in the DOCX file.
