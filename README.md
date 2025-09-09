@@ -1,20 +1,15 @@
-# Algorithm for Uploading Data from DOCX Tables to Database via Django Admin
+# Uploading Data from DOCX Tables to the DB via Django Admin
 
-This algorithm allows you to upload data from DOCX tables directly into a database through the Django admin panel. 
+For my project I implemented the ability to upload tables from DOCX files directly into the database through the Django admin panel.
 
-### How It Works
+- [utils.py](./documents/utils/utils.py) - contains the core logic for processing DOCX files
+- The **DocxToDB** class converts tables into CSV which is then imported into PostgreSQL
+- The **ImportDocument402n** subclass extends the logic when needed (e.g., field mapping) 
 
-[utils.py](./documents/utils/utils.py) - contains the basic algorithm for processing DOCX.
+---
 
-1. **File Upload in Admin Panel**: 
-   You can drag and drop a DOCX file into the Django admin panel. The file is then processed, and the data is extracted from the tables in the DOCX file.
-   
-2. **Conversion of DOCX Data**:
-   The `DocxToDB` class is responsible for converting DOCX tables into CSV format. Afterward, the CSV file is parsed, and the data is imported into the PostgreSQL database.
+### How it looks in the admin panel
+![Admin Upload Example](assets/admin.jpg)
 
-3. **Custom Implementation**:
-   A subclass of `DocxToDB`, called `ImportDocument402n`, is implemented to handle specific adjustments for a given use case, such as field mappings and other custom parsing logic. This class demonstrates how you can extend the core functionality for specific needs.
-
-4. **Why CSV?**:
-   In this case, CSV is used for data handling instead of using `DataFrame`, as the files being processed are small, and CSV provides a simple and efficient method for parsing and importing data.
-
+### Example of using uploaded data in my project
+![Project Data Example](assets/example.gif)
